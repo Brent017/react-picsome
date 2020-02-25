@@ -1,10 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <header>
-      <h2>PicSome</h2>
-      <i className="ri-shopping-cart-line ri-fw ri-2x"></i>
+      <Link to="/">
+        <h2>PicSome</h2>
+      </Link>
+      <Link to="/cart">
+        <i className="ri-shopping-cart-line ri-fw ri-2x">Cart</i>
+      </Link>
     </header>
   );
 }
