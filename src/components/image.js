@@ -5,6 +5,7 @@ function Image({ className, img }) {
   // console.log(hovered);
   const heartIcon = hovered && <i className="ri-heart-line favorite"></i>;
   const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>;
+
   return (
     <div
       className={`${className} image-container`}
