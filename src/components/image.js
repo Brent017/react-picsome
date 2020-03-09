@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 function Image({ className, img }) {
   const [hovered, setHovered] = useState(false);
-  console.log(hovered);
-
+  // console.log(hovered);
+  const heartIcon = hovered && <i className="ri-heart-line favorite"></i>;
+  const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>;
   return (
     <div
       className={`${className} image-container`}
@@ -11,6 +12,8 @@ function Image({ className, img }) {
       onMouseLeave={() => setHovered(false)}
     >
       <img src={img.url} className="image-grid" />
+      {heartIcon}
+      {cartIcon}
     </div>
   );
 }
