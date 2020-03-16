@@ -5,6 +5,11 @@ import CartItem from "../components/CartItem";
 function Cart() {
   const { cartItems } = useContext(Context);
   // console.log(cartItems)
+  const totalCost = 5.99 * cartItems.length;
+  const totalCostDisplay = totalCost.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD"
+  });
   const cartItemElements = cartItems.map(item => (
     <CartItem key={item.id} item={item} />
   ));
