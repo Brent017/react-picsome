@@ -40,9 +40,9 @@ function ContextProvider({ children }) {
     setCartItems(prevItems => prevItems.filter(item => item.id !== id));
   }
 
-  console.log(cartItems);
-
-  //   console.log(allPhotos);
+  function emptyCart() {
+    setCartItems([]);
+  }
 
   return (
     <Context.Provider
@@ -51,7 +51,8 @@ function ContextProvider({ children }) {
         toggleFavorite,
         addToCart,
         removeFromCart,
-        cartItems
+        cartItems,
+        emptyCart
       }}
     >
       {children}
