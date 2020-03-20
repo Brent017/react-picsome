@@ -19,4 +19,10 @@ function CartItem({ item }) {
   );
 }
 
+CartItem.propTypes = {
+  item: PropTypes.shape({
+    url: PropTypes.string.isRequired
+  })
+};
+
 export default CartItem;
